@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Checkout | Artmart</title>
+</head>
+
+<body>
+  <header>
+    <a href="search.html">
+      <img src="artmart_logo.png" alt="Artmart" class="logo">
+    </a>
+  </header>
+
+  <main>
+    <form id="checkout-form" class="checkout-form">
+      <fieldset>
+        <legend>Contact information</legend>
+        <div class="grid">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Shipping address</legend>
+        <div class="grid">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required pattern="[A-Z a-z]{1,32}">
+
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" required>
+
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" required>
+
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="AT">Austria</option>
+            <option value="DE">Germany</option>
+            <option value="CH">Switzerland</option>
+          </select>
+
+          <label for="postalcode">Postal code</label>
+          <input type="text" name="postalcode" id="postalcode" required pattern="[0-9]{4}">
+
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" name="phone" id="phone" placeholder="+43 123456789">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Card details</legend>
+        <div class="grid">
+          <label for="cardholder">Name on card</label>
+          <input type="text" name="cardholder" id="cardholder" required pattern="^[a-zA-Z][a-zA-Z\.]{1,20}$">
+
+          <label for="cardnumber">Card number</label>
+          <input type="text" name="cardnumber" id="cardnumber" required pattern="\d{16}">
+
+          <label for="cardexpiry">Expiration date</label>
+          <input name="cardexpiry" id="cardexpiry" type="text" required placeholder="MM/YYYY" pattern="\d{1,2}/\d{4}">
+
+          <label for="cardcvc">CVC</label>
+          <input name="cardcvc" id="cardcvc" type="text" pattern="\d{3}" required>
+        </div>
+      </fieldset>
+
+      <div>
+        <div>Subtotal: € 194.50</div>
+        <div>Shipping Costs: € 15.00</div>
+      </div>
+
+      <div>
+        <div class="checkout-total">Total: € 209.50</div>
+      </div>
+
+      <div class="button-row">
+        <a href="cart.html">&larr; Back to Cart</a>
+        <button type="submit">Pay</button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
